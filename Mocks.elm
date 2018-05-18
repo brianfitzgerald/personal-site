@@ -48,6 +48,28 @@ carfax =
     }
 
 
+quarkworks : Work
+quarkworks =
+    { title = "Quarkworks"
+    , duration = "Oct 2015 - Jun 2016"
+    , description =
+        [ "Worked on a variety of native mobile applications, including ZephyrCharts, an aviation mapping application for pilots, and the companion app for Columbia's local Roots n Blues music festival."
+        , "Developed a cloud architecture for managing content for the Roots n Blues project."
+        ]
+    }
+
+
+wirecloud : Work
+wirecloud =
+    { title = "WireCloud"
+    , duration = "Feb 2014 - Sep 2015"
+    , description =
+        [ "Developed the frontend and backend systems for Gofer, a local food delivery service. Built a system for managing a stream of orders, and assigning them to drivers, as well as a customer-facing order tracking system. Also developed a companion mobile web application for drivers."
+        , "Developed an automated cryptocurrency analytics and trading platform."
+        ]
+    }
+
+
 mockPastWork : List Work
 mockPastWork =
-    [ carfax ]
+    [ carfax, quarkworks, wirecloud ]
