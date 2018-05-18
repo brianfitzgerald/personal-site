@@ -16,5 +16,5 @@ type alias Project =
 type alias Work =
     { title : String
     , duration : String
-    , description : String
+    , description : List String
     }

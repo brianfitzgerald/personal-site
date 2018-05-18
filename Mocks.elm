@@ -32,14 +32,19 @@ manyWorlds =
 
 mockProjects : List Project
 mockProjects =
-    [ birdFighting, stealingFromWalmart, manyWorlds ]
+    [ manyWorlds ]
 
 
 carfax : Work
 carfax =
     { title = "CARFAX"
     , duration = "2016 - Present"
-    , description = "Software Engineer"
+    , description =
+        [ "Led the development of the CARFAX Service Shops application, which provides shops with a toolset for managing customer-facing data for their shop and viewing analytics."
+        , "Designed and implemented a package-based frontend architecture for myCARFAX's core products over the span of several project timelines. Developed a standard for sharing common functionality across products and teams.\n"
+        , "Created an architecture for one of CARFAX's first user-facing products running on Amazon Web Services. Collaborated on the strategy for migrating the CARFAX's on-premises consumer services to an AWS-managed, Kubernetes-based infrastructure."
+        , "Worked on the rewrite of myCARFAX's core web applications from Angular to React/Redux. Worked with the User Experience team to enforce a consistent look and feel across myCARFAX products.\n"
+        ]
     }
 
 

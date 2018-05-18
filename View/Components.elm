@@ -27,7 +27,7 @@ project proj =
         [ h1 [ css [ fontSize (px 24) ] ] [ text proj.title ]
         , span [ css [ fontSize (px 16) ] ] [ text proj.tagline ]
         , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ] [ text proj.description ]
-        , proj.technologies |> List.map text |> span [ css [ paddingRight (px 15) ] ]
+        , proj.technologies |> List.map (\l -> span [] [ text l, text ", " ]) |> span []
         ]
 
 
@@ -36,5 +36,7 @@ work wor =
     div []
         [ h1 [ css [ fontSize (px 24) ] ] [ text wor.title ]
         , span [ css [ fontSize (px 16) ] ] [ text wor.duration ]
-        , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ] [ text wor.description ]
+        , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ]
+            [ wor.description |> List.map (\l -> li [] [ text l ]) |> ul []
+            ]
         ]
