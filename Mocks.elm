@@ -9,7 +9,7 @@ birdFighting =
     , tagline = "I fought every bird I saw"
     , title = "Bird Fighting"
     , technologies = [ "Birds", "Fists" ]
-    , link = "https://github.com/brianfitzgerald/many-worlds"
+    , link = Just "https://github.com/brianfitzgerald/many-worlds"
     }
 
 
@@ -19,7 +19,7 @@ stealingFromWalmart =
     , tagline = "I took what I wanted from Walmart."
     , title = "Stealing from Walmart"
     , technologies = [ "Pockets" ]
-    , link = "https://github.com/brianfitzgerald/many-worlds"
+    , link = Just "https://github.com/brianfitzgerald/many-worlds"
     }
 
 
@@ -29,7 +29,7 @@ manyWorlds =
     , tagline = "An experimental storytelling platform for Android and iOS"
     , title = "Many Worlds"
     , technologies = [ "React Native", "DynamoDB", "Firebase" ]
-    , link = "https://itunes.apple.com/us/app/many-worlds/id1343988468?ls=1&mt=8"
+    , link = Just "https://itunes.apple.com/us/app/many-worlds/id1343988468?ls=1&mt=8"
     }
 
 
@@ -39,7 +39,7 @@ omens =
     , tagline = "A networked party game for iOS and Android"
     , title = "Omens"
     , technologies = [ "React Native", "DynamoDB" ]
-    , link = "https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8"
+    , link = Just "https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8"
     }
 
 

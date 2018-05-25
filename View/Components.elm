@@ -32,8 +32,10 @@ project proj =
         [ h1 [ css [ fontSize (px 24) ] ] [ text proj.title ]
         , span [ css [ fontSize (px 16) ] ] [ text proj.tagline ]
         , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ] [ text proj.description ]
-        , proj.technologies |> List.map (\l -> span [] [ text l, text ", " ]) |> span []
-        , linkButton "Project Page" proj.link
+        , proj.technologies |> List.map (\l -> span [] [ text l ]) |> List.intersperse (text ", ") |> span []
+        , proj.link
+            |> Maybe.map (linkButton "Project Page")
+            |> Maybe.withDefault (text "")
         ]
 
 
