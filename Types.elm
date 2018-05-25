@@ -10,6 +10,7 @@ type alias Project =
     , tagline : String
     , description : String
     , technologies : List Technology
+    , link : String
     }
 
 

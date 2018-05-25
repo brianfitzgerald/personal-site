@@ -21,6 +21,11 @@ itemRow title content =
     div [ css [ marginTop (px 15) ] ] <| span [ css [ fontSize (px 36) ] ] [ text title ] :: content
 
 
+linkButton : String -> String -> Html msg
+linkButton title link =
+    a [ href link ] [ text title ]
+
+
 project : Project -> Html msg
 project proj =
     div []
@@ -28,6 +33,7 @@ project proj =
         , span [ css [ fontSize (px 16) ] ] [ text proj.tagline ]
         , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ] [ text proj.description ]
         , proj.technologies |> List.map (\l -> span [] [ text l, text ", " ]) |> span []
+        , linkButton "Go" proj.link
         ]
 
 

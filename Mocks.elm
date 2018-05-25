@@ -9,6 +9,7 @@ birdFighting =
     , tagline = "I fought every bird I saw"
     , title = "Bird Fighting"
     , technologies = [ "Birds", "Fists" ]
+    , link = "https://github.com/brianfitzgerald/many-worlds"
     }
 
 
@@ -18,21 +19,33 @@ stealingFromWalmart =
     , tagline = "I took what I wanted from Walmart."
     , title = "Stealing from Walmart"
     , technologies = [ "Pockets" ]
+    , link = "https://github.com/brianfitzgerald/many-worlds"
     }
 
 
 manyWorlds : Project
 manyWorlds =
-    { description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n"
+    { description = ""
     , tagline = "An experimental storytelling platform for Android and iOS"
     , title = "Many Worlds"
+    , technologies = [ "React Native", "DynamoDB", "Firebase" ]
+    , link = "https://github.com/brianfitzgerald/many-worlds"
+    }
+
+
+omens : Project
+omens =
+    { description = "An adaptation of the party Game Werewolf to mobile phones."
+    , tagline = "A networked party game for iOS and Android"
+    , title = "Omens"
     , technologies = [ "React Native", "DynamoDB" ]
+    , link = "https://github.com/brianfitzgerald/many-worlds"
     }
 
 
 mockProjects : List Project
 mockProjects =
-    [ manyWorlds ]
+    [ manyWorlds, omens ]
 
 
 carfax : Work
