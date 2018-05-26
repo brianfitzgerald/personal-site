@@ -1,6 +1,12 @@
 module Types exposing (..)
 
 
+type alias SocialLink =
+    { url : String
+    , title : String
+    }
+
+
 type alias Technology =
     String
 

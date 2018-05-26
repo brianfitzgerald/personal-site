@@ -3,24 +3,12 @@ module Mocks exposing (..)
 import Types exposing (..)
 
 
-birdFighting : Project
-birdFighting =
-    { description = "For a whole year, whenever I saw a bird, I would pick a fight with it. For owls, I tended to use a stiff uppercut; for pigeons, a couple jabs to the plumage usually did the trick."
-    , tagline = "I fought every bird I saw"
-    , title = "Bird Fighting"
-    , technologies = [ "Birds", "Fists" ]
-    , link = Just "https://github.com/brianfitzgerald/many-worlds"
-    }
-
-
-stealingFromWalmart : Project
-stealingFromWalmart =
-    { description = "I shoplifted various items from the Walmart in town."
-    , tagline = "I took what I wanted from Walmart."
-    , title = "Stealing from Walmart"
-    , technologies = [ "Pockets" ]
-    , link = Just "https://github.com/brianfitzgerald/many-worlds"
-    }
+socialLinks : List SocialLink
+socialLinks =
+    [ { url = "https://github.com/brianfitzgerald", title = "GitHub" }
+    , { url = "https://www.linkedin.com/in/brian-fitzgerald-2ab8a218/", title = "LinkedIn" }
+    , { url = "https://github.com/brianfitzgerald/resume/blob/master/Resume/resume.pdf", title = "Resume" }
+    ]
 
 
 manyWorlds : Project

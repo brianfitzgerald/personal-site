@@ -21,6 +21,20 @@ itemRow title content =
     div [ css [ marginTop (px 15) ] ] <| span [ css [ fontSize (px 36) ] ] [ text title ] :: content
 
 
+socialLink : Types.SocialLink -> Html msg
+socialLink socialLink =
+    span [ css [ display block, paddingTop (px 5), paddingBottom (px 5) ] ]
+        [ a
+            [ href socialLink.url
+            , css
+                [ color (hex "007AFF")
+                , textDecoration none
+                ]
+            ]
+            [ text socialLink.title ]
+        ]
+
+
 linkButton : String -> String -> Html msg
 linkButton title link =
     span
@@ -41,9 +55,9 @@ linkButton title link =
 
 project : Project -> Html msg
 project proj =
-    div []
-        [ span []
-            [ span [ css [ fontSize (px 24) ] ] [ text proj.title ]
+    div [ css [ maxWidth (px 500) ] ]
+        [ span [ css [ paddingTop (px 15), paddingBottom (px 15), displayFlex ] ]
+            [ span [ css [ fontSize (px 24), flex (int 1) ] ] [ text proj.title ]
             , proj.link
                 |> Maybe.map (linkButton "Open")
                 |> Maybe.withDefault (text "")
@@ -60,6 +74,6 @@ work wor =
         [ h1 [ css [ fontSize (px 24) ] ] [ text wor.title ]
         , span [ css [ fontSize (px 16) ] ] [ text wor.duration ]
         , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ]
-            [ wor.description |> List.map (\l -> li [] [ text l ]) |> ul []
+            [ wor.description |> List.map (\l -> li [ css [ paddingTop (px 5), paddingBottom (px 5) ] ] [ text l ]) |> ul []
             ]
         ]
