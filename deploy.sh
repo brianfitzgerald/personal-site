@@ -1,0 +1,1 @@
+aws s3 sync . s3://www.brianfitzgerald.online --profile personal --acl public-read --exclude "*" --include "elm.js" --include "main.css" --include "index.html"
