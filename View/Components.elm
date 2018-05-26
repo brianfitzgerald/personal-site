@@ -23,19 +23,34 @@ itemRow title content =
 
 linkButton : String -> String -> Html msg
 linkButton title link =
-    a [ href link ] [ text title ]
+    span
+        [ css
+            [ paddingTop (px 10)
+            , paddingBottom (px 10)
+            , paddingRight (px 25)
+            , paddingLeft (px 25)
+            , backgroundColor (hex "009AFF")
+            , borderRadius (px 8)
+            ]
+        ]
+        [ a
+            [ href link, css [ textDecoration none, color (hex "FFFFFF") ] ]
+            [ text title ]
+        ]
 
 
 project : Project -> Html msg
 project proj =
     div []
-        [ h1 [ css [ fontSize (px 24) ] ] [ text proj.title ]
+        [ span []
+            [ span [ css [ fontSize (px 24) ] ] [ text proj.title ]
+            , proj.link
+                |> Maybe.map (linkButton "Open")
+                |> Maybe.withDefault (text "")
+            ]
         , span [ css [ fontSize (px 16) ] ] [ text proj.tagline ]
         , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ] [ text proj.description ]
         , proj.technologies |> List.map (\l -> span [] [ text l ]) |> List.intersperse (text ", ") |> span []
-        , proj.link
-            |> Maybe.map (linkButton "Project Page")
-            |> Maybe.withDefault (text "")
         ]
 
 
