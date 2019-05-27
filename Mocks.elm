@@ -1,4 +1,4 @@
-module Mocks exposing (..)
+module Mocks exposing (carfax, manyWorlds, mockPastWork, mockProjects, omens, quarkworks, socialLinks, wirecloud)
 
 import Types exposing (..)
 

@@ -1,14 +1,23 @@
-module View.App exposing (app)
+module View.App exposing (Model, Msg(..), view)
 
+import Css exposing (..)
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (..)
+import Mocks exposing (mockPastWork, mockProjects, socialLinks)
 import View.Components as Components
-import Mocks exposing (mockProjects, mockPastWork, socialLinks)
-import Css exposing (..)
 
 
-app : String -> Html msg
-app model =
+type Msg
+    = Increment
+    | Decrement
+
+
+type alias Model =
+    { count : Int }
+
+
+view : Model -> Html Msg
+view model =
     div [ css [ paddingLeft (px 12) ] ]
         [ Components.title "Brian Fitzgerald"
         , socialLinks

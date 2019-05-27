@@ -1,13 +1,31 @@
 module Main exposing (main)
 
-import Html.Styled exposing (..)
-import View.App exposing (app)
+import Browser
+import Html exposing (Html, button, div, text)
+import Html.Events exposing (onClick)
+import Html.Styled exposing (toUnstyled)
+import View.App exposing (Model, Msg(..), view)
 
 
-main : Program Never String msg
+initialModel : Model
+initialModel =
+    { count = 0 }
+
+
+update : Msg -> Model -> Model
+update msg model =
+    case msg of
+        Increment ->
+            { model | count = model.count + 1 }
+
+        Decrement ->
+            { model | count = model.count - 1 }
+
+
+main : Program () Model Msg
 main =
-    Html.Styled.beginnerProgram
-        { model = "Hello World"
-        , update = \msg model -> model
-        , view = app
+    Browser.sandbox
+        { init = initialModel
+        , view = view >> toUnstyled
+        , update = update
         }

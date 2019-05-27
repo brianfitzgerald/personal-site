@@ -1,4 +1,4 @@
-module Types exposing (..)
+module Types exposing (Project, SocialLink, Technology, Work)
 
 
 type alias SocialLink =

@@ -1,8 +1,8 @@
-module View.Components exposing (..)
+module View.Components exposing (itemRow, linkButton, project, socialLink, subtitle, title, work)
 
+import Css exposing (..)
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (..)
-import Css exposing (..)
 import Types exposing (Project, Work)
 
 
@@ -17,26 +17,26 @@ subtitle content =
 
 
 itemRow : String -> List (Html msg) -> Html msg
-itemRow title content =
-    div [ css [ marginTop (px 15) ] ] <| span [ css [ fontSize (px 36) ] ] [ text title ] :: content
+itemRow t content =
+    div [ css [ marginTop (px 15) ] ] <| span [ css [ fontSize (px 36) ] ] [ text t ] :: content
 
 
 socialLink : Types.SocialLink -> Html msg
-socialLink socialLink =
+socialLink s =
     span [ css [ display block, paddingTop (px 5), paddingBottom (px 5) ] ]
         [ a
-            [ href socialLink.url
+            [ href s.url
             , css
                 [ color (hex "007AFF")
                 , textDecoration none
                 ]
             ]
-            [ text socialLink.title ]
+            [ text s.title ]
         ]
 
 
 linkButton : String -> String -> Html msg
-linkButton title link =
+linkButton t link =
     span
         [ css
             [ paddingTop (px 10)
@@ -49,7 +49,7 @@ linkButton title link =
         ]
         [ a
             [ href link, css [ textDecoration none, color (hex "FFFFFF") ] ]
-            [ text title ]
+            [ text t ]
         ]
 
 
