@@ -1,4 +1,4 @@
-module Types exposing (Project, SocialLink, Technology, Work)
+module Types exposing (Link, Project, SocialLink, Work)
 
 
 type alias SocialLink =
@@ -7,16 +7,16 @@ type alias SocialLink =
     }
 
 
-type alias Technology =
-    String
+type alias Link =
+    { title : String
+    , url : String
+    }
 
 
 type alias Project =
     { title : String
-    , tagline : String
     , description : String
-    , technologies : List Technology
-    , link : Maybe String
+    , link : Link
     }
 
 

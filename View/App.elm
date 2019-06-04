@@ -20,19 +20,15 @@ view : Model -> Html Msg
 view model =
     div [ css [ paddingLeft (px 12) ] ]
         [ Components.title "Brian Fitzgerald"
-        , socialLinks
-            |> List.map Components.socialLink
-            |> div []
+        , Components.subtitle "Programmer and XR designer"
         , mockProjects
             |> List.map Components.project
             |> Components.itemRow "Projects"
-        , mockPastWork
-            |> List.map Components.work
-            |> Components.itemRow "Work"
-        , span []
-            [ text "This site was built with "
-            , a
-                [ href "http://elm-lang.org/", css [ textDecoration none ] ]
-                [ text "Elm." ]
-            ]
+
+        -- , span []
+        --     [ text "This site was built with "
+        --     , a
+        --         [ href "http://elm-lang.org/", css [ textDecoration none ] ]
+        --         [ text "Elm." ]
+        --     ]
         ]

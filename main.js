@@ -4426,53 +4426,38 @@ var author$project$Main$update = F2(
 				{count: model.count - 1});
 		}
 	});
-var author$project$Mocks$carfax = {
-	description: _List_fromArray(
-		['Led the development of the CARFAX Service Shops application, which provides shops with a toolset for managing customer-facing data for their shop and viewing analytics.', 'Designed and implemented a package-based frontend architecture for myCARFAX\'s core products over the span of several project timelines. Developed a standard for sharing common functionality across products and teams.\n', 'Created an architecture for one of CARFAX\'s first user-facing products running on Amazon Web Services. Collaborated on the strategy for migrating the CARFAX\'s on-premises consumer services to an AWS-managed, Kubernetes-based infrastructure.', 'Worked on the rewrite of myCARFAX\'s core web applications from Angular to React/Redux. Worked with the User Experience team to enforce a consistent look and feel across myCARFAX products.\n']),
-	duration: '2016 - Present',
-	title: 'CARFAX'
-};
-var author$project$Mocks$quarkworks = {
-	description: _List_fromArray(
-		['Worked on a variety of native mobile applications, including ZephyrCharts, an aviation mapping application for pilots, and the companion app for Columbia\'s local Roots n Blues music festival.', 'Developed a cloud architecture for managing content for the Roots n Blues project.']),
-	duration: 'Oct 2015 - Jun 2016',
-	title: 'Quarkworks'
-};
-var author$project$Mocks$wirecloud = {
-	description: _List_fromArray(
-		['Developed the frontend and backend systems for Gofer, a local food delivery service. Built a system for managing a stream of orders, and assigning them to drivers, as well as a customer-facing order tracking system. Also developed a companion mobile web application for drivers.', 'Developed an automated cryptocurrency analytics and trading platform.']),
-	duration: 'Feb 2014 - Sep 2015',
-	title: 'WireCloud'
-};
-var author$project$Mocks$mockPastWork = _List_fromArray(
-	[author$project$Mocks$carfax, author$project$Mocks$quarkworks, author$project$Mocks$wirecloud]);
-var elm$core$Maybe$Just = function (a) {
-	return {$: 'Just', a: a};
+var author$project$Mocks$healium = {
+	description: 'An adaptation of the party game Werewolf to mobile phones.',
+	link: {title: 'View on App Store', url: 'https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8'},
+	title: 'Omens'
 };
 var author$project$Mocks$manyWorlds = {
 	description: 'This is a personal project that I put together as an exercise in writing a creative tool for mobile devices, as well as an interest in making content authoring easier. I decided to go with basic, choose-your-own-adventure style stories, as a medium that users can interact with, that is also simple enough that it would be possible to make a mobile authoring interface for.\n\n',
-	link: elm$core$Maybe$Just('https://itunes.apple.com/us/app/many-worlds/id1343988468?ls=1&mt=8'),
-	tagline: 'An experimental storytelling platform for Android and iOS',
-	technologies: _List_fromArray(
-		['React Native', 'DynamoDB', 'Firebase']),
+	link: {title: 'View on App Store', url: 'https://itunes.apple.com/us/app/many-worlds/id1343988468?ls=1&mt=8'},
 	title: 'Many Worlds'
 };
+var author$project$Mocks$muse = {
+	description: 'An adaptation of the party game Werewolf to mobile phones.',
+	link: {title: 'View on App Store', url: 'https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8'},
+	title: 'Omens'
+};
 var author$project$Mocks$omens = {
-	description: 'An adaptation of the party Game Werewolf to mobile phones.',
-	link: elm$core$Maybe$Just('https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8'),
-	tagline: 'A networked party game for iOS and Android',
-	technologies: _List_fromArray(
-		['React Native', 'DynamoDB']),
+	description: 'An adaptation of the party game Werewolf to mobile phones.',
+	link: {title: 'View on App Store', url: 'https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8'},
+	title: 'Omens'
+};
+var author$project$Mocks$symphonics = {
+	description: 'An adaptation of the party game Werewolf to mobile phones.',
+	link: {title: 'View on App Store', url: 'https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8'},
+	title: 'Omens'
+};
+var author$project$Mocks$symphonicsAR = {
+	description: 'An adaptation of the party game Werewolf to mobile phones.',
+	link: {title: 'View on App Store', url: 'https://itunes.apple.com/us/app/omens-a-game-of-deception/id1244569926?ls=1&mt=8'},
 	title: 'Omens'
 };
 var author$project$Mocks$mockProjects = _List_fromArray(
-	[author$project$Mocks$manyWorlds, author$project$Mocks$omens]);
-var author$project$Mocks$socialLinks = _List_fromArray(
-	[
-		{title: 'GitHub', url: 'https://github.com/brianfitzgerald'},
-		{title: 'LinkedIn', url: 'https://www.linkedin.com/in/brian-fitzgerald-2ab8a218/'},
-		{title: 'Resume', url: 'https://github.com/brianfitzgerald/resume/blob/master/Resume/resume.pdf'}
-	]);
+	[author$project$Mocks$manyWorlds, author$project$Mocks$omens, author$project$Mocks$healium, author$project$Mocks$muse, author$project$Mocks$symphonics, author$project$Mocks$symphonicsAR]);
 var elm$core$Basics$apL = F2(
 	function (f, x) {
 		return f(x);
@@ -4496,6 +4481,9 @@ var rtfeldman$elm_css$Css$prop1 = F2(
 var rtfeldman$elm_css$Css$fontSize = rtfeldman$elm_css$Css$prop1('font-size');
 var rtfeldman$elm_css$Css$marginTop = rtfeldman$elm_css$Css$prop1('margin-top');
 var rtfeldman$elm_css$Css$PxUnits = {$: 'PxUnits'};
+var elm$core$Maybe$Just = function (a) {
+	return {$: 'Just', a: a};
+};
 var elm$core$Maybe$Nothing = {$: 'Nothing'};
 var elm$core$String$fromFloat = _String_fromNumber;
 var rtfeldman$elm_css$Css$Structure$Compatible = {$: 'Compatible'};
@@ -7540,9 +7528,7 @@ var author$project$View$Components$project = function (proj) {
 						proj.technologies)))
 			]));
 };
-var rtfeldman$elm_css$Css$block = {display: rtfeldman$elm_css$Css$Structure$Compatible, value: 'block'};
-var rtfeldman$elm_css$Css$display = rtfeldman$elm_css$Css$prop1('display');
-var author$project$View$Components$socialLink = function (s) {
+var author$project$View$Components$subtitle = function (content) {
 	return A2(
 		rtfeldman$elm_css$Html$Styled$span,
 		_List_fromArray(
@@ -7550,32 +7536,13 @@ var author$project$View$Components$socialLink = function (s) {
 				rtfeldman$elm_css$Html$Styled$Attributes$css(
 				_List_fromArray(
 					[
-						rtfeldman$elm_css$Css$display(rtfeldman$elm_css$Css$block),
-						rtfeldman$elm_css$Css$paddingTop(
-						rtfeldman$elm_css$Css$px(5)),
-						rtfeldman$elm_css$Css$paddingBottom(
-						rtfeldman$elm_css$Css$px(5))
+						rtfeldman$elm_css$Css$fontSize(
+						rtfeldman$elm_css$Css$px(28))
 					]))
 			]),
 		_List_fromArray(
 			[
-				A2(
-				rtfeldman$elm_css$Html$Styled$a,
-				_List_fromArray(
-					[
-						rtfeldman$elm_css$Html$Styled$Attributes$href(s.url),
-						rtfeldman$elm_css$Html$Styled$Attributes$css(
-						_List_fromArray(
-							[
-								rtfeldman$elm_css$Css$color(
-								rtfeldman$elm_css$Css$hex('007AFF')),
-								rtfeldman$elm_css$Css$textDecoration(rtfeldman$elm_css$Css$none)
-							]))
-					]),
-				_List_fromArray(
-					[
-						rtfeldman$elm_css$Html$Styled$text(s.title)
-					]))
+				rtfeldman$elm_css$Html$Styled$text(content)
 			]));
 };
 var rtfeldman$elm_css$Css$bold = {fontWeight: rtfeldman$elm_css$Css$Structure$Compatible, value: 'bold'};
@@ -7602,91 +7569,6 @@ var author$project$View$Components$title = function (content) {
 				rtfeldman$elm_css$Html$Styled$text(content)
 			]));
 };
-var rtfeldman$elm_css$Html$Styled$li = rtfeldman$elm_css$Html$Styled$node('li');
-var rtfeldman$elm_css$Html$Styled$ul = rtfeldman$elm_css$Html$Styled$node('ul');
-var author$project$View$Components$work = function (wor) {
-	return A2(
-		rtfeldman$elm_css$Html$Styled$div,
-		_List_Nil,
-		_List_fromArray(
-			[
-				A2(
-				rtfeldman$elm_css$Html$Styled$h1,
-				_List_fromArray(
-					[
-						rtfeldman$elm_css$Html$Styled$Attributes$css(
-						_List_fromArray(
-							[
-								rtfeldman$elm_css$Css$fontSize(
-								rtfeldman$elm_css$Css$px(24))
-							]))
-					]),
-				_List_fromArray(
-					[
-						rtfeldman$elm_css$Html$Styled$text(wor.title)
-					])),
-				A2(
-				rtfeldman$elm_css$Html$Styled$span,
-				_List_fromArray(
-					[
-						rtfeldman$elm_css$Html$Styled$Attributes$css(
-						_List_fromArray(
-							[
-								rtfeldman$elm_css$Css$fontSize(
-								rtfeldman$elm_css$Css$px(16))
-							]))
-					]),
-				_List_fromArray(
-					[
-						rtfeldman$elm_css$Html$Styled$text(wor.duration)
-					])),
-				A2(
-				rtfeldman$elm_css$Html$Styled$div,
-				_List_fromArray(
-					[
-						rtfeldman$elm_css$Html$Styled$Attributes$css(
-						_List_fromArray(
-							[
-								rtfeldman$elm_css$Css$fontSize(
-								rtfeldman$elm_css$Css$px(16)),
-								rtfeldman$elm_css$Css$paddingTop(
-								rtfeldman$elm_css$Css$px(15)),
-								rtfeldman$elm_css$Css$paddingBottom(
-								rtfeldman$elm_css$Css$px(15)),
-								rtfeldman$elm_css$Css$maxWidth(
-								rtfeldman$elm_css$Css$px(500))
-							]))
-					]),
-				_List_fromArray(
-					[
-						A2(
-						rtfeldman$elm_css$Html$Styled$ul,
-						_List_Nil,
-						A2(
-							elm$core$List$map,
-							function (l) {
-								return A2(
-									rtfeldman$elm_css$Html$Styled$li,
-									_List_fromArray(
-										[
-											rtfeldman$elm_css$Html$Styled$Attributes$css(
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$paddingTop(
-													rtfeldman$elm_css$Css$px(5)),
-													rtfeldman$elm_css$Css$paddingBottom(
-													rtfeldman$elm_css$Css$px(5))
-												]))
-										]),
-									_List_fromArray(
-										[
-											rtfeldman$elm_css$Html$Styled$text(l)
-										]));
-							},
-							wor.description))
-					]))
-			]));
-};
 var author$project$View$App$view = function (model) {
 	return A2(
 		rtfeldman$elm_css$Html$Styled$div,
@@ -7702,18 +7584,11 @@ var author$project$View$App$view = function (model) {
 		_List_fromArray(
 			[
 				author$project$View$Components$title('Brian Fitzgerald'),
-				A2(
-				rtfeldman$elm_css$Html$Styled$div,
-				_List_Nil,
-				A2(elm$core$List$map, author$project$View$Components$socialLink, author$project$Mocks$socialLinks)),
+				author$project$View$Components$subtitle('Programmer and XR designer'),
 				A2(
 				author$project$View$Components$itemRow,
 				'Projects',
 				A2(elm$core$List$map, author$project$View$Components$project, author$project$Mocks$mockProjects)),
-				A2(
-				author$project$View$Components$itemRow,
-				'Work',
-				A2(elm$core$List$map, author$project$View$Components$work, author$project$Mocks$mockPastWork)),
 				A2(
 				rtfeldman$elm_css$Html$Styled$span,
 				_List_Nil,

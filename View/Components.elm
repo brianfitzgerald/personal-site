@@ -3,7 +3,7 @@ module View.Components exposing (itemRow, linkButton, project, socialLink, subti
 import Css exposing (..)
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (..)
-import Types exposing (Project, Work)
+import Types exposing (Link, Project, Work)
 
 
 title : String -> Html msg
@@ -35,8 +35,8 @@ socialLink s =
         ]
 
 
-linkButton : String -> String -> Html msg
-linkButton t link =
+linkButton : Link -> Html msg
+linkButton link =
     span
         [ css
             [ paddingTop (px 10)
@@ -48,8 +48,8 @@ linkButton t link =
             ]
         ]
         [ a
-            [ href link, css [ textDecoration none, color (hex "FFFFFF") ] ]
-            [ text t ]
+            [ href link.url, css [ textDecoration none, color (hex "FFFFFF") ] ]
+            [ text link.title ]
         ]
 
 
@@ -59,12 +59,9 @@ project proj =
         [ span [ css [ paddingTop (px 15), paddingBottom (px 15), displayFlex ] ]
             [ span [ css [ fontSize (px 24), flex (int 1) ] ] [ text proj.title ]
             , proj.link
-                |> Maybe.map (linkButton "Open")
-                |> Maybe.withDefault (text "")
+                |> linkButton
             ]
-        , span [ css [ fontSize (px 16) ] ] [ text proj.tagline ]
         , div [ css [ fontSize (px 16), paddingTop (px 15), paddingBottom (px 15), maxWidth (px 500) ] ] [ text proj.description ]
-        , proj.technologies |> List.map (\l -> span [] [ text l ]) |> List.intersperse (text ", ") |> span []
         ]
 
 
